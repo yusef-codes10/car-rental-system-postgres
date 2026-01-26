@@ -9,3 +9,8 @@ CHECK (EXTRACT(YEAR FROM production_year) <= EXTRACT(YEAR FROM CURRENT_DATE));
 ALTER TABLE Car
 ADD CONSTRAINT hourly_price_const
 CHECK (hourly_rental_price >= 10.00);
+
+-- ! 3- Availability constraint
+ALTER TABLE Car 
+ADD CONSTRAINT availability_const
+CHECK (availability IN ('Available', 'Rented', 'Breakdown'));

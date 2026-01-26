@@ -15,3 +15,13 @@ CREATE TABLE Customer (
     phone_number VARCHAR(40) UNIQUE,
     date_of_birth DATE
 );
+
+CREATE TABLE Rental (
+    car_id BIGINT,
+    costumer_id BIGINT,
+
+    start_date DATE,
+    end_date Date,
+    return_date DATE,
+    price NUMERIC(12, 2)
+);

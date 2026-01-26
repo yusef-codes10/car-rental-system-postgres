@@ -28,18 +28,18 @@ CREATE TABLE Rental (
 );
 
 -- this design  here: 
-CREATE TABLE Rental (
-    car_id BIGINT,
-    customer_id BIGINT,
+-- CREATE TABLE Rental (
+--     car_id BIGINT,
+--     customer_id BIGINT,
 
-    start_date DATE,
-    end_date DATE,
-    return_date DATE,
-    price NUMERIC(12,2),
+--     start_date DATE,
+--     end_date DATE,
+--     return_date DATE,
+--     price NUMERIC(12,2),
 
-    PRIMARY KEY (car_id, customer_id),
-    FOREIGN KEY (car_id) REFERENCES Car(id),
-    FOREIGN KEY (customer_id) REFERENCES Customer(id)
-);
+--     PRIMARY KEY (car_id, customer_id),
+--     FOREIGN KEY (car_id) REFERENCES Car(id),
+--     FOREIGN KEY (customer_id) REFERENCES Customer(id)
+-- );
 
 -- is not relevant in our case, cuz this one means the customer can rent a car only once

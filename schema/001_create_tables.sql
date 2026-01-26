@@ -17,8 +17,9 @@ CREATE TABLE Customer (
 );
 
 CREATE TABLE Rental (
-    car_id BIGINT,
-    costumer_id BIGINT,
+    id BIGINT PRIMARY KEY,
+    car_id BIGINT REFERENCES Car(id),
+    costumer_id BIGINT REFERENCES Customer(id),
 
     start_date DATE,
     end_date Date,

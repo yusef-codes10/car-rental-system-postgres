@@ -18,3 +18,9 @@ where Customer.id in (
     SELECT costumer_id from rental
 
 );
+
+-- Show all rentals that have not been returned yet, including car model and customer name.
+SELECT first_name, last_name, model, make FROM Customer
+JOIN rental on rental.costumer_id = Customer.id
+JOIN car on rental.car_id = car.id
+where rental.return_date is null;

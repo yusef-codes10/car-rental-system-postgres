@@ -10,3 +10,11 @@ where car.id in (
     SELECT car_id from rental
 
 );
+
+-- List all customers who have rented a car at least once.
+SELECT DISTINCT first_name, last_name FROM Customer 
+JOIN Rental on rental.costumer_id = Customer.id
+where Customer.id in (
+    SELECT costumer_id from rental
+
+);

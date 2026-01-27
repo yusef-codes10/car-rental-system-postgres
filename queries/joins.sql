@@ -24,3 +24,7 @@ SELECT first_name, last_name, model, make FROM Customer
 JOIN rental on rental.costumer_id = Customer.id
 JOIN car on rental.car_id = car.id
 where rental.return_date is null;
+
+-- Show each rental with car make, model, and rental start & end date.
+SELECT model, make, start_date, end_date FROM rental
+JOIN car on car.id = rental.car_id;

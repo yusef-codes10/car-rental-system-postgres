@@ -21,3 +21,26 @@ INSERT INTO Car (model, make, production_year, availability, hourly_rental_price
 ('Sentra', 'Nissan', '2016-04-01', 'Available', 11.00),
 ('Wrangler', 'Jeep', '2020-07-01', 'Rented', 27.00),
 ('Cherokee', 'Jeep', '2017-02-01', 'Available', 19.00);
+
+INSERT INTO Customer (first_name, last_name, email, phone_number, date_of_birth) VALUES
+('Peter', 'Parker', 'peter@dailybugle.com', '111-111', '1998-08-10'),
+('Gwen', 'Stacy', 'gwen@oscorp.com', NULL, '1999-05-14'),
+('Mary Jane', 'Watson', 'mj@theatre.com', '222-222', '1998-04-01'),
+('Flash', 'Thompson', NULL, '333-333', '1997-11-11'),
+('Harry', 'Osborn', 'harry@oscorp.com', '444-444', '1998-06-23'),
+('Norman', 'Osborn', 'norman@oscorp.com', NULL, '1970-02-02'),
+('Eddie', 'Brock', 'eddie@bugle.com', '555-555', '1995-09-09'),
+('Felicia', 'Hardy', NULL, NULL, '1996-01-15'),
+('May', 'Parker', 'may@home.com', '666-666', '1955-03-30'),
+('Ben', 'Parker', NULL, NULL, '1950-07-07'),
+('Curtis', 'Connors', 'lizard@lab.com', '777-777', '1975-10-10'),
+('Otto', 'Octavius', 'otto@lab.com', NULL, '1972-12-12'),
+('Max', 'Dillon', NULL, '888-888', '1990-08-08'),
+('Adrian', 'Toomes', 'vulture@sky.com', '999-999', '1965-05-05'),
+('Quentin', 'Beck', NULL, NULL, '1985-06-06'),
+('Wilson', 'Fisk', 'kingpin@crime.com', '101-101', '1968-01-01'),
+('Miles', 'Morales', 'miles@school.com', '202-202', '2003-09-13'),
+('Jessica', 'Drew', NULL, NULL, '1992-02-20'),
+('Cindy', 'Moon', 'cindy@news.com', '303-303', '2000-12-01'),
+('John', 'Jameson', 'jj@space.com', NULL, '1991-04-18');
+

@@ -31,3 +31,7 @@ WHERE rental.car_id IS NULL;
 SELECT count(*) as numbers_of_rent from car
 JOIN rental on rental.car_id = car.id
 GROUP BY car.id;
+
+        --? alt | this one calculates the number of rows
+        SELECT count(*) from car join rental on car.id = rental.car_id;
+

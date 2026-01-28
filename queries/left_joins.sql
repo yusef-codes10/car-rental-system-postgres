@@ -35,3 +35,11 @@ GROUP BY car.id;
         --? alt | this one calculates the number of rows
         SELECT count(*) from car join rental on car.id = rental.car_id;
 
+        --? This is the corrected 5th query
+        SELECT
+            car.id,
+            car.model,
+            COUNT(rental.id) AS number_of_rentals
+        FROM car
+        LEFT JOIN rental ON rental.car_id = car.id
+        GROUP BY car.id, car.model;

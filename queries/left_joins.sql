@@ -13,3 +13,7 @@ LEFT JOIN rental on rental.costumer_id = customer.id;
 --!3- List customers who never rented any car
 SELECT costumer.* from customer
 LEFT JOIN rental on rental.customer_id = customer.id where rental.costumer_id IS NULL;
+
+        -- ? opposite query
+        select rental.costumer_id, customer.first_name, customer.last_name from rental
+        rental-# join customer on customer.id = rental.costumer_id;

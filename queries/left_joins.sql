@@ -22,3 +22,12 @@ LEFT JOIN rental on rental.customer_id = customer.id where rental.costumer_id IS
 SELECT car.* FROM car
 LEFT JOIN rental on rental.car_id = car.id
 WHERE rental.car_id IS NULL;
+
+        --? opposite query 
+        SELECT car.* FROM car
+        JOIN rental on rental.car_id = car.id;
+
+--!5- Show all cars and the number of times each car was rented (including zero)
+SELECT count(*) as numbers_of_rent from car
+JOIN rental on rental.car_id = car.id
+GROUP BY car.id;

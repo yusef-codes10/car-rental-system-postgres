@@ -1,0 +1,1 @@
+-- 🟡 LEVEL 2 — LEFT JOIN intuition (NULL awareness)

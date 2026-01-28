@@ -9,3 +9,7 @@ LEFT JOIN rental on rental.car_id = car.id;
 -- !2- Show all customers, even those who never rented a car.
 SELECT Customer.* From Customer
 LEFT JOIN rental on rental.costumer_id = customer.id;
+
+--!3- List customers who never rented any car
+SELECT costumer.* from customer
+LEFT JOIN rental on rental.customer_id = customer.id where rental.costumer_id IS NULL;

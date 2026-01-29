@@ -45,10 +45,10 @@ LIMIT 1;
 --!5th Show customers who have never rented more than once.
 SELECT customer.first_name,
         customer.last_name,
-        count(*) as rents_number
+        count(rental.id) as rents_number
 FROM Customer
-JOIN Rental on rental.costumer_id = customer.id
+LEFT JOIN Rental on rental.costumer_id = customer.id
 GROUP BY rental.costumer_id,
          customer.first_name,
          customer.last_name
-HAVING count(*) = 1;
+HAVING count(*) <= 1;

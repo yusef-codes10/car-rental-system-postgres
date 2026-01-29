@@ -21,7 +21,22 @@ HAVING count(*) > 1;
 
 --!3- Show the total number of rentals per car model
 SELECT Count(*) total_rents,
-        car.model
+        car.model,
+        car.make
 FROM rental
 JOIN car on car.id = rental.car_id
-GROUP BY car.model;
+GROUP BY car.model,
+         car.make;
+
+--!4- Find the most rented car model
+SELECT Count(*) total_rents,
+        car.model,
+        car.make
+FROM rental
+JOIN car on car.id = rental.car_id
+GROUP BY car.model,
+         car.make
+ORDER BY total_rents DESC
+LIMIT 1;
+
+    --? I think it's not accurate, what if multiple cars shared that max amount 

@@ -7,3 +7,14 @@ JOIN rental on rental.costumer_id = customer.id
 group by rental.customer_id,
 customer.first_name,
 customer.last_name;
+
+--!2- List customers who have rented more than one car
+SELECT  customer.first_name,
+        customer.last_name,
+        count(*) as rent_number
+FROM Customer
+JOIN Rental on rental.costumer_id = customer.id
+GROUP BY rental.costumer_id,
+         customer.first_name,
+         customer.last_name
+HAVING count(*) > 1;

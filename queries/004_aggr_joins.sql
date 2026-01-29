@@ -49,6 +49,6 @@ SELECT customer.first_name,
 FROM Customer
 JOIN Rental on rental.costumer_id = customer.id
 GROUP BY rental.costumer_id,
-         customer.fisrt_name,
+         customer.first_name,
          customer.last_name
 HAVING count(*) = 1;

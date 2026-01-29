@@ -17,3 +17,8 @@ WHERE car.availability = 'Rented' AND rental.return_date IS NULL;
 SELECT car.* FROM car
 JOIN rental on rental.car_id = car.id
 WHERE car.availability = 'Available';
+
+--!5- Show rentals made by customers who have NULL phone numbers.
+SELECT DISTINCT rental.*, customer.first_name, customer.last_name FROM rental
+JOIN customer on customer.id = rental.costumer_id
+where customer.phone_number IS NULL;

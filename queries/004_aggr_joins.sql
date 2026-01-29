@@ -40,3 +40,15 @@ ORDER BY total_rents DESC
 LIMIT 1;
 
     --? I think it's not accurate, what if multiple cars shared that max amount 
+    --? WINDOW FUNCTION 
+
+--!5th Show customers who have never rented more than once.
+SELECT customer.first_name,
+        customer.last_name,
+        count(*) as rents_number
+FROM Customer
+JOIN Rental on rental.costumer_id = customer.id
+GROUP BY rental.costumer_id,
+         customer.fisrt_name,
+         customer.last_name
+HAVING count(*) = 1;

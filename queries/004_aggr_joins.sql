@@ -18,3 +18,10 @@ GROUP BY rental.costumer_id,
          customer.first_name,
          customer.last_name
 HAVING count(*) > 1;
+
+--!3- Show the total number of rentals per car model
+SELECT Count(*) total_rents,
+        car.model
+FROM rental
+JOIN car on car.id = rental.car_id
+GROUP BY car.model;

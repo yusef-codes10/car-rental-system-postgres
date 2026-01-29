@@ -12,3 +12,8 @@ SELECT customer.* FROM Customer
 JOIN rental on customer.id = rental.costumer_id
 JOIN car on car.id = rental.car_id
 WHERE car.availability = 'Rented' AND rental.return_date IS NULL;
+
+--!4- Show cars that are marked as `Available` but have rental history.
+SELECT car.* FROM car
+JOIN rental on rental.car_id = car.id
+WHERE car.availability = 'Available';

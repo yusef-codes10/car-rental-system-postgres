@@ -14,3 +14,19 @@ GROUP BY rental.car_id,
          customer.first_name,
          customer.last_name
 HAVING count(*) >= 2;
+
+--!2- List cars that were rented by more than one different customer
+SELECT car.model,
+       car.make,
+       count(*),
+       customer.first_name,
+       customer.last_name
+FROM Car
+JOIN rental on rental.car_id = car.id
+JOIN customer on customer.id = rental.costumer_id
+group by rental.costumer_id,
+         car.model,
+         car.make,
+         customer.first_name,
+         customer.last_name
+HAVING count(*) >= 2;

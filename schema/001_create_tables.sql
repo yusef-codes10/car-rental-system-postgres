@@ -10,7 +10,7 @@ CREATE TABLE Car (
 CREATE TABLE Customer (
     id BIGSERIAL PRIMARY KEY,
     first_name VARCHAR(40),
-    last_name VARCHAR(40), 
+    last_name VARCHAR(40),
     email VARCHAR(40) UNIQUE,
     phone_number VARCHAR(40) UNIQUE,
     date_of_birth DATE
@@ -27,7 +27,7 @@ CREATE TABLE Rental (
     price NUMERIC(12, 2)
 );
 
--- this design  here: 
+-- this design  here:
 -- CREATE TABLE Rental (
 --     car_id BIGINT,
 --     customer_id BIGINT,

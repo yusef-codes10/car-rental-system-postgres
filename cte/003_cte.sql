@@ -15,5 +15,7 @@ WITH oldest_date AS (
 )
 SELECT customer.first_name, customer.last_name, customer.date_of_birth
 FROM customer
-CROSS JOIN oldest_date
-WHERE customer.date_of_birth = oldest_date.min_value;
+WHERE customer.date_of_birth = (
+    SELECT min_value
+    FROM oldest_date
+ );

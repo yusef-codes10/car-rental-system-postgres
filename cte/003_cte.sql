@@ -19,3 +19,13 @@ WHERE customer.date_of_birth = (
     SELECT min_value
     FROM oldest_date
  );
+
+--!3- List all cars that have never been rented.
+WITH rented_cars as (
+    SELECT car.*
+    FROM car
+    JOIN rental on car.id = rental.car_id
+)
+SELECT car.*
+from car
+where car.id NOT IN (SELECT id FROM rented_cars);
